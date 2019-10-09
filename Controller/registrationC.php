@@ -1,6 +1,6 @@
 <?php
 
-    require ('Model/inscriptionBd.php');
+    require ('Model/registrationBd.php');
     require ('Class/User.php');
 
     $pseudo = $_POST['Pseudo'];
