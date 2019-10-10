@@ -11,7 +11,7 @@ class User
 
     public function __construct($admin, $pseudo, $email, $password, $gender)
     {
-        $this->b_myAdmin = $this->b_myAdmin;
+        $this->b_myAdmin = $admin;
         $this->s_myPseudo = $pseudo;
         $this->s_myEmail = $email;
         $this->s_myPassword = $password;
