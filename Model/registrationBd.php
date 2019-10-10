@@ -1,6 +1,7 @@
 <?php
 
 
+    require '../Class/User.php';
 
     function dbConnect()
     {
@@ -19,7 +20,8 @@
     {
         $dbLink = dbConnect();
 
-        require_once '../Class/User.php';
+        print_r($newUser);
+        exit();
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
                     VALUES (\'' . $newUser->getMyPseudo() . '\'
