@@ -10,10 +10,10 @@
 <?php
     $s_error = $_GET['error'];
 
-    if ($s_error == 'pwd')
-        $s_error = 'Les mots de passe sont différents.';
-    else if ($s_error == 'wrong')
+    if ($s_error == 'wrong')
         $s_error = 'Vous n\'avez pas rempli un des champs';
+    else if ($s_error == 'pwd')
+        $s_error = 'Les mots de passe sont différents.';
     else
         $s_error = '';
 
