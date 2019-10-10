@@ -9,9 +9,12 @@
 
 <?php
     $s_error = $_GET['error'];
-    $s_error = '';
+
     if ($s_error == 'pwd')
         $s_error = 'Les mots de passe sont différents.'
+    else{
+        $s_error = '';
+    }
 
 ?>
 
