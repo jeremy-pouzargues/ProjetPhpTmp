@@ -15,10 +15,10 @@
 
     require '../Class/User.php';
 
-    $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
+    //$newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
 
     require ('../Model/registrationBd.php');
 
-    registration($newUser);
+    registration(new User($s_pseudo, $s_email, $s_pwd, $s_gender));
 
     require '../View/registrationV2.php';
