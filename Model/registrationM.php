@@ -34,7 +34,7 @@
     {
         $dbLink = dbConnect();
 
-        $query = 'SELECT pseudo, email, FROM `User` WHERE pseudo = \'' . $s_pseudo . '\' AND email = \'' . $s_email . '\'';
+        $query = 'SELECT pseudo, email FROM `User` WHERE pseudo = \'' . $s_pseudo . '\' AND email = \'' . $s_email . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';
