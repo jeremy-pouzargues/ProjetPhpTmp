@@ -1,7 +1,7 @@
 <?php
 
 
-    require '../Class/User.php';
+    require 'User.php';
 
     require 'dbConnect.php';
 
@@ -11,8 +11,9 @@
 
 
 
-        $query =    'INSERT INTO User (pseudo, admin, email, password, gender)
-                    VALUES (\'' . $newUser->getMyPseudo() . '\',
+        $query =    'INSERT INTO User (admin, pseudo, email, password, gender)
+                    VALUES (            \' 0 \',
+                            \'' . $newUser->getMyPseudo() . '\',
                                         \' 0 \',
                             \'' . $newUser->getMyEmail() . '\',
                             \'' . $newUser->getMyPassword() . '\',
@@ -27,9 +28,5 @@
             echo 'Requête : ' . $query . '<br/>';
             exit();
         }
-//        else
-//            {
-//            echo "Bonjour $id, <br/>
-//              votre inscription a bien été prise en compte, merci.";
-//        }
+
     }

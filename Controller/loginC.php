@@ -9,15 +9,14 @@
     if (login($s_pseudo,$s_pwd))
     {
         $_SESSION['login'] = 'ok';
-        $_SESSION['pseudo'] = $s_pseudo;
-        $_SESSION['password'] = $s_pwd;
-        if ($s_pseudo == 'jeremy-pouzargues')
-            header('Location: admin.php');      //partie à faire
+        $_SESSION['user'] = returnUser($s_pseudo, $s_pwd);
+        if ($_SESSION['user']->getMyAdmin() == 1)
+            header('Location: ../View/pageTestV.php?admin=oui');
         else
-            header('Location: page1.php');
+            header('Location: ../View/pageTestV.php?admin=non');
     }
     else
-        header('Location: login.php?step=ERROR');
+        header('Location: ../View/loginV.php?step=error');
 
 
 

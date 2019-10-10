@@ -14,7 +14,7 @@
 
     require ('../Model/registrationBd.php');
 
-    $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
+    $newUser = new User(0, $s_pseudo, $s_email, $s_pwd, $s_gender);
 
 
 
