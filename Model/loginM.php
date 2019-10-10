@@ -50,5 +50,5 @@
 
         $resultat = $dbResult->fetch_assoc();
 
-        return new User($resultat['pseudo'],$resultat['email'],$resultat['password'],$resultat['gender']);
+        return new User($resultat['admin'], $resultat['pseudo'],$resultat['email'],$resultat['password'],$resultat['gender']);
     }
