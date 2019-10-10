@@ -20,4 +20,4 @@
 
     registration($newUser);
 
-    require '../View/login.php';
+    require '../View/loginV.php';
