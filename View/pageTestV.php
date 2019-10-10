@@ -24,7 +24,8 @@
     <?php echo 'Etes vous un admin ? <br/>'
                 . $_GET['admin'];?>
 
-    <?php echo $_SESSION['user']->GetMyAdmin(); ?>
+    <?php print_r($_SESSION['user']);
+    exit(); ?>
 
 
 
