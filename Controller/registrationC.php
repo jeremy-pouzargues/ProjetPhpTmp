@@ -1,6 +1,6 @@
 <?php
 
-    require ('../Model/registrationBd.php');
+
 
     $s_pseudo = $_POST['Pseudo'];
     $s_email = $_POST['Email'];
@@ -13,7 +13,11 @@
         header('../View/pageInscription.php');
     }
 
+    require '../Class/User.php';
+
     $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
+
+    require ('../Model/registrationBd.php');
 
     registration($newUser);
 
