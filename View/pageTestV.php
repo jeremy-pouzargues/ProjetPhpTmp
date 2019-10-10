@@ -3,6 +3,13 @@
 
 <?php
     require '../utils.inc.php';
+    require '../Model/User.php';
+
+    session_start();
+    if($_SESSION['login']!='ok')
+    {
+        die('Erreur d\'authentification');
+    }
 
     start_page('Page de test');
 
@@ -17,6 +24,7 @@
     <?php echo 'Etes vous un admin ? <br/>'
                 . $_GET['admin'];?>
 
+    <?php echo $_SESSION['user']->GetMyAdmin(); ?>
 
 
 

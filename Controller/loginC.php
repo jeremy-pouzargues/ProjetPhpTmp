@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
 
     require '../Model/loginM.php';
 
@@ -10,8 +11,6 @@
     {
         $_SESSION['login'] = 'ok';
         $_SESSION['user'] = returnUser($s_pseudo, $s_pwd);
-        print_r($_SESSION['user']->getMyAdmin());
-        exit();
         if ($_SESSION['user']->getMyAdmin() == 1)
             header('Location: ../View/pageTestV.php?admin=oui');
         else
