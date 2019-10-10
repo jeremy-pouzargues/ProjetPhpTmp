@@ -47,11 +47,14 @@
 
         $result = $dbResult->fetch_assoc();
 
+        $dbResult->close();
+
         if ($result['pseudo'] != NULL)
             return 1;
         else
         {
-            $dbLink = dbConnect();
+
+
             $query = 'SELECT email FROM `User` WHERE email = \'' . $s_email . '\'';
 
             if (!($dbResult = mysqli_query($dbLink, $query))) {
