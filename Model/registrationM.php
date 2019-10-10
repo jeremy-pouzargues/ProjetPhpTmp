@@ -47,9 +47,9 @@
 
         $result = $dbResult->fetch_assoc();
 
-        $dbResult->close();
-
-        mysqli_close($dbLink);
+//        $dbResult->close();
+//
+//        mysqli_close($dbLink);
 
         if ($result['pseudo'] != NULL)
             return 1;
@@ -75,9 +75,9 @@
 
         $result = $dbResult->fetch_assoc();
 
-        mysqli_close($dbLink);
-
-        $dbResult->close();
+//        mysqli_close($dbLink);
+//
+//        $dbResult->close();
 
         if ($result['email'] != NULL)
             return 1;

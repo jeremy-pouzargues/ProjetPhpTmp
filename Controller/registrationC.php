@@ -14,7 +14,7 @@
     else{
 
         require('../Model/registrationM.php');
-        if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND checkPseudo($s_pseudo) == 0 AND checkEmail($s_email) == 0)
+        if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND checkPseudo($s_pseudo) == 0 /*AND checkEmail($s_email) == 0*/)
         {
 
 
@@ -27,11 +27,13 @@
 
         }
         else if ($s_pseudo == NULL OR $s_email == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
+        {
             header('Location: ../View/registrationV.php?error=wrong');
-        else if (checkPseudo($s_pseudo) == 1)
-            header('Location: ../View/registrationV.php?error=pseudo');
-        else if (checkEmail($s_email) == 1)
-            header('Location : ../View/registrationV.php?error=email');
+        }
+//        else if (checkPseudo($s_pseudo) == 1)
+//            header('Location: ../View/registrationV.php?error=pseudo');
+//        else if (checkEmail($s_email) == 1)
+//            header('Location: ../View/registrationV.php?error=email');
 
 
 
