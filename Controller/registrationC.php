@@ -9,7 +9,7 @@
 
     if ($s_pwd != $s_pwd2)
     {
-        header('Location: ../View/pageInscription.php?error=pwd');
+        header('Location: ../View/registrationV.php?error=pwd');
     }
 
     require ('../Model/registrationBd.php');

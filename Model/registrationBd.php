@@ -14,7 +14,6 @@
         $query =    'INSERT INTO User (admin, pseudo, email, password, gender)
                     VALUES (            \' 0 \',
                             \'' . $newUser->getMyPseudo() . '\',
-                                        \' 0 \',
                             \'' . $newUser->getMyEmail() . '\',
                             \'' . $newUser->getMyPassword() . '\',
                             \'' . $newUser->getMyGender() . '\')';
