@@ -17,7 +17,7 @@
 
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
-                    VALUES (\'' . $newUser->myPseudo . '\'
+                    VALUES (\'' . $newUser->getMyPseudo() . '\'
                             \'' . $newUser->getMyEmail() . '\'
                             \'' . $newUser->getMyPassword() . '\'
                             \'' . $newUser->getMyGender() . '\')';
