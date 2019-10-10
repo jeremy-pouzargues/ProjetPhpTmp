@@ -24,9 +24,9 @@
 
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
-                    VALUES (\'' . $newUser->getMyPseudo() . '\'
-                            \'' . $newUser->getMyEmail() . '\'
-                            \'' . $newUser->getMyPassword() . '\'
+                    VALUES (\'' . $newUser->getMyPseudo() . '\',
+                            \'' . $newUser->getMyEmail() . '\',
+                            \'' . $newUser->getMyPassword() . '\',
                             \'' . $newUser->getMyGender() . '\')';
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
