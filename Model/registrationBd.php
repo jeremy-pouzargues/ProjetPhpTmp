@@ -1,6 +1,6 @@
 <?php
 
-    include 'Class/User.php';
+    require '../Class/User.php';
 
 
     function dbConnect()

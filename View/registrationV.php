@@ -7,7 +7,7 @@
     <h1>Page d'inscription</h1>
 
 
-    <form action="Controller/registrationC.php" method="post">
+    <form action="../Controller/registrationC.php" method="post">
         <input type="text" name="Pseudo" placeholder="Pseudo" /> <br/>
         <input type="text" name="Email" placeholder="E-Mail"/> <br/>
         <input type="password" name="Pwd" placeholder="Mot de passe"/> <br/>
