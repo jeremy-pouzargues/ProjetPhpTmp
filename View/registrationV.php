@@ -9,8 +9,10 @@
 
 <?php
     $s_error = $_GET['error'];
+    $s_error = '';
     if ($s_error = 'pwd')
-        $s_errorPwd = 'Les mots de passe sont différents.'
+        $s_error = 'Les mots de passe sont différents.'
+
 ?>
 
 
@@ -22,7 +24,7 @@
         <input type="text" name="Email" placeholder="E-Mail"/> <br/>
         <input type="password" name="Pwd" placeholder="Mot de passe"/> <br/>
         <input type="password" name="Pwd2" placeholder="Verification du mot de passe"/> <br/>
-        <?php echo $s_errorPwd . '<br/>' ?>
+        <?php echo '<strong>' . $s_error . '</strong><br/>' ?>
         <input type="radio" name="Gender" value="Homme"/> Homme
         <input type="radio" name="Gender"value="Femme"/> Femme <br/>
         <input type="submit" name="action" value="Registration"/> <br/>
