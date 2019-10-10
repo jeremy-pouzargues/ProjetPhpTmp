@@ -51,7 +51,9 @@
             return 1;
         else
         {
+            $dbLink = dbConnect();
             $query = 'SELECT email FROM `User` WHERE email = \'' . $s_email . '\'';
+
             if (!($dbResult = mysqli_query($dbLink, $query))) {
                 echo 'Erreur de requête<br/>';
                 //Affiche le type d'erreur.
