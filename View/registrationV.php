@@ -1,7 +1,7 @@
 <?php
-    include '../utils.inc.php';
+    require '../utils.inc.php';
 
-    start_page('Page d\'inscription')
+    start_page('Page d\'inscription');
 ?>
 
     <h1>Page d'inscription</h1>
@@ -16,3 +16,8 @@
         <input type="radio" name="Gender"value="Femme"/> Femme <br/>
         <input type="submit" name="action" value="Registration"/> <br/>
     </form>
+
+
+<?php
+    end_page();
+?>
