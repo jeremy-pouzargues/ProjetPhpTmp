@@ -13,12 +13,12 @@
         header('../View/pageInscription.php');
     }
 
-    require '../Class/User.php';
+    require_once '../Class/User.php';
 
-    //$newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
+    $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
 
     require ('../Model/registrationBd.php');
 
-    registration(new User($s_pseudo, $s_email, $s_pwd, $s_gender));
+    registration($newUser);
 
     require '../View/registrationV2.php';
