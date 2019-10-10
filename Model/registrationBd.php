@@ -1,6 +1,5 @@
 <?php
 
-    require '../Class/User.php';
 
 
     function dbConnect()
@@ -18,7 +17,7 @@
 
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
-                    VALUES (\'' . $newUser->getMyPseudo() . '\'
+                    VALUES (\'' . $newUser->myPseudo . '\'
                             \'' . $newUser->getMyEmail() . '\'
                             \'' . $newUser->getMyPassword() . '\'
                             \'' . $newUser->getMyGender() . '\')';
