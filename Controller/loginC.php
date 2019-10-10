@@ -5,12 +5,12 @@
     require '../Model/loginM.php';
 
     $s_pseudo = $_POST['Pseudo'];
-    $s_pwd = $_POST['Pwd'];
+    $s_password = $_POST['Pwd'];
 
-    if (login($s_pseudo,$s_pwd))
+    if (login($s_pseudo,$s_password))
     {
         $_SESSION['login'] = 'ok';
-        $_SESSION['user'] = returnUser($s_pseudo, $s_pwd);
+        $_SESSION['user'] = returnUser($s_pseudo, $s_password);
         if ($_SESSION['user']->getMyAdmin() == 1)
             header('Location: ../View/pageTestV.php?admin=oui');
         else

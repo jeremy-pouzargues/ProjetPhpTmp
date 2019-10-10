@@ -32,12 +32,12 @@
 
     }
 
-    function returnUser ($s_pseudo,$s_pwd)
+    function returnUser ($s_pseudo,$s_password)
     {
         $dbLink = dbConnect();
 
 
-        $query = 'SELECT admin AS admin, pseudo AS pseudo, email AS email, password AS password, gender AS gender  FROM `User` WHERE pseudo = \'' . $s_pseudo . '\'';
+        $query = 'SELECT pseudo, email, FROM `User` WHERE pseudo = \'' . $s_pseudo . '\' AND password = \'' . $s_password . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';
@@ -48,7 +48,7 @@
             exit();
         }
 
-        $resultat = $dbResult->fetch_assoc();
+        $result = $dbResult->fetch_assoc();
 
-        return new User($resultat['admin'], $resultat['pseudo'],$resultat['email'],$resultat['password'],$resultat['gender']);
+        return new User($result['admin'], $result['pseudo'],$result['email'],$result['password'],$result['gender']);
     }

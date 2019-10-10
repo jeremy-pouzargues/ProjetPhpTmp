@@ -12,24 +12,25 @@
         header('Location: ../View/registrationV.php?error=pwd');
     }
     else{
-        if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL)
+        if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND check($s_pseudo, $s_email) == 0)
         {
 
-            require ('../Model/registrationBd.php');
+            require('../Model/registrationM.php');
 
             $newUser = new User(0, $s_pseudo, $s_email, $s_pwd, $s_gender);
-
-
 
             registration($newUser);
 
             require '../View/loginV.php';
 
         }
-        else
-        {
+        else if ($s_pseudo == NULL OR $s_email == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
             header('Location: ../View/registrationV.php?error=wrong');
-        }
+        else if (check($s_pseudo, $s_email) == 1)
+            header('Location: ../View/registrationV.php?error=pseudo');
+        else if (check($s_pseudo, $s_email) == 2)
+            header('Location : ../View/registrationV.php?error=email');
+
 
 
     }
