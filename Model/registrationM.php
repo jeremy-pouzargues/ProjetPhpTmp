@@ -49,6 +49,8 @@
 
         $dbResult->close();
 
+        mysqli_close($dbLink);
+
         if ($result['pseudo'] != NULL)
             return 1;
         else
@@ -72,6 +74,8 @@
         }
 
         $result = $dbResult->fetch_assoc();
+
+        mysqli_close($dbLink);
 
         $dbResult->close();
 
