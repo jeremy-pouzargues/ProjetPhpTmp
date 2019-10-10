@@ -12,15 +12,15 @@
         return $dbLink;
     }
 
-    function registration($User)
+    function registration($newUser)
     {
         $dbLink = dbConnect();
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
-                    VALUES (\'' . $User->pseudo . '\'
-                            \'' . $User->email . '\'
-                            \'' . $User->password . '\'
-                            \'' . $User->gender . '\')';
+                    VALUES (\'' . $newUser->pseudo . '\'
+                            \'' . $newUser->email . '\'
+                            \'' . $newUser->password . '\'
+                            \'' . $newUser->gender . '\')';
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
         {
