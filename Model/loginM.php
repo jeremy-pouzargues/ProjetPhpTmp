@@ -37,7 +37,7 @@
         $dbLink = dbConnect();
 
 
-        $query = 'SELECT admin AS admin, pseudo AS pseudo, email AS email, password AS password, gender AS gender  FROM `User` WHERE IDENT = \'' . $s_pseudo . '\'';
+        $query = 'SELECT admin AS admin, pseudo AS pseudo, email AS email, password AS password, gender AS gender  FROM `User` WHERE pseudo = \'' . $s_pseudo . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';
