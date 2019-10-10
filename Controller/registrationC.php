@@ -18,7 +18,7 @@ start_page('test');
     require ('../Model/registrationBd.php');
 
     $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
-    $newUser->setMyEmail($s_email);
+//    $newUser->setMyEmail($s_email);
     echo $newUser->getMyEmail();
 
 
