@@ -12,10 +12,12 @@
         header('Location: ../View/registrationV.php?error=pwd');
     }
     else{
+
+        require('../Model/registrationM.php');
         if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND check($s_pseudo, $s_email) == 0)
         {
 
-            require('../Model/registrationM.php');
+
 
             $newUser = new User(0, $s_pseudo, $s_email, $s_pwd, $s_gender);
 
