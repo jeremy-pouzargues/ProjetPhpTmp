@@ -68,6 +68,8 @@
 
             $result = $dbResult->fetch_assoc();
 
+            $dbResult->close();
+
             if ($result['email'] != NULL)
                 return 2;
             else
