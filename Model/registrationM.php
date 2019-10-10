@@ -47,9 +47,9 @@
 
         $result = $dbResult->fetch_assoc();
 
-        if ($result['pseudo'] != NULL AND $result['email'] != NULL)
+        if ($result['pseudo'] == NULL AND $result['email'] == NULL)
             return 0;
-        else if ($result['pseudo'] == NULL)
+        else if ($result['pseudo'] != NULL)
             return 1;
         else
             return 2;
