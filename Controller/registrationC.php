@@ -11,6 +11,9 @@
     {
         header('Location: ../View/registrationV.php?error=pwd');
     }
+    else{
+
+
 
     require ('../Model/registrationBd.php');
 
@@ -21,3 +24,5 @@
     registration($newUser);
 
     require '../View/loginV.php';
+
+    }
