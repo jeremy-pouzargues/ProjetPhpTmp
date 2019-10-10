@@ -25,7 +25,7 @@
         $resultat = $dbResult->fetch_assoc();
 
 
-        if ($resultat['password'] == $s_pwd AND $resultat['pseudo'] == $s_pseudo)
+        if ($resultat['password'] == $s_pwd AND $s_pwd != NULL AND $resultat['pseudo'] == $s_pseudo AND $s_pseudo != NULL)
             return true;
         else
             return false;
