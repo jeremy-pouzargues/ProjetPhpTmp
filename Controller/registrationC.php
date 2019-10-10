@@ -17,3 +17,5 @@
     $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
 
     registration($newUser);
+
+    header('View/registrationV2.php');
