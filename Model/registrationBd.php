@@ -3,6 +3,7 @@
 
     require '../Class/User.php';
 
+
     function dbConnect()
     {
         $dbLink = mysqli_connect(   "mysql-projet-iut-info.alwaysdata.net",
@@ -20,8 +21,7 @@
     {
         $dbLink = dbConnect();
 
-        print_r($newUser);
-        exit();
+
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
                     VALUES (\'' . $newUser->getMyPseudo() . '\'

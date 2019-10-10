@@ -16,9 +16,9 @@
     require ('../Model/registrationBd.php');
 
     $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
-
-
-
-    registration($newUser);
-
-    require '../View/registrationV2.php';
+    echo $newUser->getMyEmail();
+//
+//
+//    registration($newUser);
+//
+//    require '../View/registrationV2.php';
