@@ -1,8 +1,5 @@
 <?php
 
-require '../utils.inc.php';
-
-start_page('test');
 
     $s_pseudo = $_POST['Pseudo'];
     $s_email = $_POST['Email'];
@@ -18,13 +15,9 @@ start_page('test');
     require ('../Model/registrationBd.php');
 
     $newUser = new User($s_pseudo, $s_email, $s_pwd, $s_gender);
-//    $newUser->setMyEmail($s_email);
-    echo $newUser->getMyEmail();
 
 
-    end_page();
-//
-//
-//    registration($newUser);
-//
-//    require '../View/registrationV2.php';
+
+    registration($newUser);
+
+    require '../View/registrationV2.php';

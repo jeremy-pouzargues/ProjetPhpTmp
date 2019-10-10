@@ -10,10 +10,10 @@ class User
 
     public function __construct($pseudo, $email, $password, $gender)
     {
-        $myPseudo = $pseudo;
-        $myEmail = $email;
-        $myPassword = $password;
-        $myGender = $gender;
+        $this->myPseudo = $pseudo;
+        $this->myEmail = $email;
+        $this->myPassword = $password;
+        $this->myGender = $gender;
     }
 
     public function getMyPseudo ()
