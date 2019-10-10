@@ -30,7 +30,7 @@
 
     }
 
-    function check($s_pseudo, $s_email)
+    function checkPseudo($s_pseudo)
     {
         $dbLink = dbConnect();
 
@@ -52,29 +52,31 @@
         if ($result['pseudo'] != NULL)
             return 1;
         else
-        {
+            return 0;
 
+    }
 
-            $query = 'SELECT email FROM `User` WHERE email = \'' . $s_email . '\'';
+    function checkEmail($s_email)
+    {
+        $dbLink = dbConnect();
 
-            if (!($dbResult = mysqli_query($dbLink, $query))) {
-                echo 'Erreur de requête<br/>';
-                //Affiche le type d'erreur.
-                echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
-                //Affiche la requête envoyée.
-                echo 'Requête : ' . $query . '<br/>';
-                exit();
-            }
+        $query = 'SELECT email FROM `User` WHERE email = \'' . $s_email . '\'';
 
-            $result = $dbResult->fetch_assoc();
-
-            $dbResult->close();
-
-            if ($result['email'] != NULL)
-                return 2;
-            else
-                return 0;
-
+        if (!($dbResult = mysqli_query($dbLink, $query))) {
+            echo 'Erreur de requête<br/>';
+            //Affiche le type d'erreur.
+            echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
+            //Affiche la requête envoyée.
+            echo 'Requête : ' . $query . '<br/>';
+            exit();
         }
 
+        $result = $dbResult->fetch_assoc();
+
+        $dbResult->close();
+
+        if ($result['email'] != NULL)
+            return 1;
+        else
+            return 0;
     }

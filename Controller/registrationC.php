@@ -28,9 +28,9 @@
         }
         else if ($s_pseudo == NULL OR $s_email == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
             header('Location: ../View/registrationV.php?error=wrong');
-        else if (check($s_pseudo, $s_email) == 1)
+        else if (checkPseudo($s_pseudo) == 1)
             header('Location: ../View/registrationV.php?error=pseudo');
-        else if (check($s_pseudo, $s_email) == 2)
+        else if (checkEmail($s_email) == 1)
             header('Location : ../View/registrationV.php?error=email');
 
 
