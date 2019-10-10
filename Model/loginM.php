@@ -11,7 +11,7 @@
         $dbLink = dbConnect();
 
 
-        $query = 'SELECT IDENT AS ident, MDP AS password FROM `User` WHERE IDENT = \'' . $s_pseudo . '\'';
+        $query = 'SELECT pseudo AS pseudo, password AS password FROM `User` WHERE pseudo = \'' . $s_pseudo . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';
@@ -25,7 +25,7 @@
         $resultat = $dbResult->fetch_assoc();
 
 
-        if ($resultat['password'] == $s_pwd AND $resultat['ident'] == $s_pseudo)
+        if ($resultat['password'] == $s_pwd AND $resultat['pseudo'] == $s_pseudo)
             return true;
         else
             return false;
