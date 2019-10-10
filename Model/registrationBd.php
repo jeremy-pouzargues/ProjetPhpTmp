@@ -1,6 +1,6 @@
 <?php
 
-    require '../Class/User.php';
+
 
 
     function dbConnect()
@@ -16,11 +16,12 @@
     {
         $dbLink = dbConnect();
 
+
         $query =    'INSERT INTO User (pseudo, email, password, gender)
-                    VALUES (\'' . $newUser->pseudo . '\'
-                            \'' . $newUser->email . '\'
-                            \'' . $newUser->password . '\'
-                            \'' . $newUser->gender . '\')';
+                    VALUES (\'' . $newUser->getMyPseudo() . '\'
+                            \'' . $newUser->getMyEmail() . '\'
+                            \'' . $newUser->getMyPassword() . '\'
+                            \'' . $newUser->getMyGender() . '\')';
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
         {
