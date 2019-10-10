@@ -19,6 +19,7 @@
     {
         $dbLink = dbConnect();
 
+        require_once '../Class/User.php';
 
         $query =    'INSERT INTO User (pseudo, email, password, gender)
                     VALUES (\'' . $newUser->getMyPseudo() . '\'
