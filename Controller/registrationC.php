@@ -28,7 +28,7 @@
             require '../View/loginV.php';
 
         }
-        else if ($s_pseudo == NULL OR $s_email == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
+        else if ($s_surname == NULL OR $s_name == NULL OR $s_pseudo == NULL OR $s_email == NULL OR $d_birth == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
         {
             header('Location: ../View/registrationV.php?error=wrong');
         }
