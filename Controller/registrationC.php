@@ -1,8 +1,10 @@
 <?php
 
-
+    $s_surname = $_POST['Surname'];
+    $s_name = $_POST['Name'];
     $s_pseudo = $_POST['Pseudo'];
     $s_email = $_POST['Email'];
+    $d_birth = $_POST['Birth'];
     $s_pwd = $_POST['Pwd'];
     $s_pwd2 = $_POST['Pwd2'];
     $s_gender = $_POST['Gender'];
@@ -14,7 +16,7 @@
     else{
 
         require('../Model/registrationM.php');
-        if ($s_pseudo != NULL AND $s_email != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND checkPseudo($s_pseudo) == 0 AND checkEmail($s_email) == 0)
+        if ($s_surname != NULL AND $s_name != NULL AND $s_pseudo != NULL AND $s_email != NULL AND $d_birth != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND checkPseudo($s_pseudo) == 0 AND checkEmail($s_email) == 0)
         {
 
 

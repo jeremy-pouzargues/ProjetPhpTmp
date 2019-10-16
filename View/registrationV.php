@@ -48,8 +48,7 @@
                 Non spécifié
             </option>
         </select>
-        <input type="radio" name="Gender" value="Homme"/> Homme
-        <input type="radio" name="Gender"value="Femme"/> Femme <br/>
+        <br/>
         <input type="submit" name="action" value="Registration"/> <br/>
     </form>
 
