@@ -17,7 +17,7 @@
     else if ($s_error == 'pseudo')
         $s_error = 'Le pseudo que vous avez choisi est déjà utilisé.';
     else if ($s_error == 'email')
-        $s_error = 'L\'email possède déjà un compte associé.';
+        $s_error = 'L\'email que vous avez choisi possède déjà un compte associé.';
     else
         $s_error = '';
 
