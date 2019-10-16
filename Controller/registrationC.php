@@ -21,7 +21,7 @@
 
 
 
-            $newUser = new User(0, $s_pseudo, $s_email, $s_pwd, $s_gender);
+            $newUser = new User(0,$s_surname, $s_name, $s_pseudo, $s_email, $d_birth, $s_pwd, $s_gender);
 
             registration($newUser);
 

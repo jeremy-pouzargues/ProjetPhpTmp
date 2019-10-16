@@ -11,10 +11,13 @@
 
 
 
-        $query =    'INSERT INTO User (admin, pseudo, email, password, gender)
+        $query =    'INSERT INTO User (admin, surname, name, pseudo, email,birthdate, password, gender)
                     VALUES (            \' 0 \',
+                            \'' . $newUser->getMySurname() . '\',
+                            \'' . $newUser->getMyName() . '\',
                             \'' . $newUser->getMyPseudo() . '\',
                             \'' . $newUser->getMyEmail() . '\',
+                            \'' . $newUser->getMyBirth() . '\',
                             \'' . $newUser->getMyPassword() . '\',
                             \'' . $newUser->getMyGender() . '\')';
 
