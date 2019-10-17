@@ -18,19 +18,35 @@
 
 
     if ($s_surname != NULL)
+    {
         changeSurname($s_surname);
+        $_SESSION['user']->setMySurname($s_surname);
+    }
     if ($s_name != NULL)
+    {
         changeName($s_name);
+        $_SESSION['user']->setMyName($s_name);
+    }
     if ($s_pseudo != NULL)
     {
         if (checkPseudo($s_pseudo) == 0)
+        {
             changePseudo($s_pseudo);
+            $_SESSION['user']->setMyPseudo($s_pseudo);
+        }
     }
     if ($d_birth != NULL)
+    {
         changeBirth($d_birth);
+        $_SESSION['user']->setMyBirth($d_birth);
+    }
     if ($s_pwd != NULL)
+    {
         changePassword($s_pwd);
+        $_SESSION['user']->setMyPassword($s_pwd);
+    }
     changeGender($s_gender);
+    $_SESSION['user']->setMyGender($s_gender);
 
 //
 //    if ($s_action == 'chSurname')
