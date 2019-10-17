@@ -6,6 +6,13 @@
     require '../Model/profileM.php';
     require '../Model/returnUserM.php';
 
+    session_start();
+    if($_SESSION['login']!='ok')
+    {
+        die('Erreur d\'authentification');
+    }
+
+
     if ($s_action == 'chSurname')
     {
         $s_newSurname = $_POST['chSurname'];
