@@ -6,6 +6,7 @@
 
     $s_pseudo = $_POST['Pseudo'];
     $s_password = $_POST['Pwd'];
+    $s_password = password_hash($s_password, PASSWORD_DEFAULT);
 
     if (login($s_pseudo,$s_password))
     {

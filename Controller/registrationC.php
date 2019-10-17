@@ -6,7 +6,9 @@
     $s_email = $_POST['Email'];
     $d_birth = $_POST['Birth'];
     $s_pwd = $_POST['Pwd'];
+    $s_pwd = password_hash($s_pwd, PASSWORD_DEFAULT);
     $s_pwd2 = $_POST['Pwd2'];
+    $s_pwd2 = password_hash($s_pwd2, PASSWORD_DEFAULT);
     $s_gender = $_POST['Gender'];
 
     if ($s_pwd != $s_pwd2)

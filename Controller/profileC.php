@@ -42,6 +42,7 @@
     }
     if ($s_pwd != NULL)
     {
+        $s_pwd = password_hash($s_pwd, PASSWORD_DEFAULT);
         changePassword($s_pwd);
         $_SESSION['user']->setMyPassword($s_pwd);
     }
