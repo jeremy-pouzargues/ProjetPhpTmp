@@ -25,19 +25,19 @@
         $resultat = $dbResult->fetch_assoc();
 
 
-        if ($resultat['password'] == $s_pwd AND $s_pwd != NULL AND $resultat['pseudo'] == $s_pseudo AND $s_pseudo != NULL)
+        if (password_verify($s_pwd, $resultat['password']) AND $s_pwd != NULL AND $resultat['pseudo'] == $s_pseudo AND $s_pseudo != NULL)
             return true;
         else
             return false;
 
     }
 
-    function returnUser ($s_pseudo,$s_password)
+    function returnUser ($s_pseudo)
     {
         $dbLink = dbConnect();
 
 
-        $query = 'SELECT admin, surname, name, pseudo, email, birthdate, password, gender FROM `User` WHERE pseudo = \'' . $s_pseudo . '\' AND password = \'' . $s_password . '\'';
+        $query = 'SELECT admin, surname, name, pseudo, email, birthdate, password, gender FROM `User` WHERE pseudo = \'' . $s_pseudo . '\'';
 
         if (!($dbResult = mysqli_query($dbLink, $query))) {
             echo 'Erreur de requête<br/>';

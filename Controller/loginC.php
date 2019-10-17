@@ -6,12 +6,12 @@
 
     $s_pseudo = $_POST['Pseudo'];
     $s_password = $_POST['Pwd'];
-    $s_password = password_hash($s_password, PASSWORD_DEFAULT);
+
 
     if (login($s_pseudo,$s_password))
     {
         $_SESSION['login'] = 'ok';
-        $_SESSION['user'] = returnUser($s_pseudo, $s_password);
+        $_SESSION['user'] = returnUser($s_pseudo);
         if ($_SESSION['user']->getMyAdmin() == 1)
             header('Location: ../View/pageTestV.php?admin=oui');
         else
