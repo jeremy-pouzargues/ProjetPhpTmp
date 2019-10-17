@@ -6,9 +6,9 @@
     $s_email = $_POST['Email'];
     $d_birth = $_POST['Birth'];
     $s_pwd = $_POST['Pwd'];
-    $s_pwd = password_hash($s_pwd, PASSWORD_BCRYPT);
+    $s_pwd = password_hash($s_pwd, P);
     $s_pwd2 = $_POST['Pwd2'];
-    $s_pwd2 = password_hash($s_pwd2, PASSWORD_BCRYPT);
+//    $s_pwd2 = password_hash($s_pwd2, PASSWORD_BCRYPT);
     $s_gender = $_POST['Gender'];
 
 //    print_r($s_pwd);
@@ -16,7 +16,7 @@
 //    print_r($s_pwd2);
 //    exit();
 
-    if ($s_pwd == $s_pwd2)
+    if (password_verify($s_pwd2, $s_pwd))
         echo 'trop bien ça marche';
     else
         echo 'trop nul ça marche pas';
