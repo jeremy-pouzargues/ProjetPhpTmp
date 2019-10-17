@@ -81,7 +81,7 @@ else
                     Femme
                 </option>
                 <option value="Autre">
-                    Non spécifié
+                    Autre
                 </option>
             </select>
             <button type="submit" name="button" value="chGender"> Changer </button> <br/>

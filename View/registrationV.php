@@ -45,8 +45,8 @@
             <option value="Femme">
                 Femme
             </option>
-            <option value="Non spécifié">
-                Non spécifié
+            <option value="Autre">
+                Autre
             </option>
         </select>
         <br/>
