@@ -7,7 +7,8 @@
         die('Erreur d\'authentification');
     }
 
-    $s_action = $_POST['value'];
+    $s_action = $_POST['action'];
+    print_r($s_action);
 
     require '../Model/profileM.php';
 
