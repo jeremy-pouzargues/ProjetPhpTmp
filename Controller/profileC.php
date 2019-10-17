@@ -9,6 +9,7 @@
 
     $s_action = $_POST['action'];
     print_r($s_action);
+    exit();
 
     require '../Model/profileM.php';
 
