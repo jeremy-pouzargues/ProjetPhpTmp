@@ -25,7 +25,9 @@
 //        print_r($_SESSION['user']->getMyPseudo());
 //        exit();
 
-        $query = 'UPDATE `User` SET surname = ' . $s_newSurname .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo() ;
+        $U_tmpUser = $_SESSION['user'];
+
+        $query = 'UPDATE `User` SET surname = ' . $s_newSurname .' WHERE pseudo = ' . $U_tmpUser->getMyPseudo() ;
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
         {
@@ -119,7 +121,7 @@
 
         $dbLink = dbConnect();
 
-        $query = 'UPDATE `User` SET password = ' . $s_newPassword .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo ;
+        $query = 'UPDATE `User` SET password = ' . $s_newPassword .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo() ;
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
         {
@@ -137,7 +139,7 @@
 
     $dbLink = dbConnect();
 
-    $query = 'UPDATE `User` SET gender = ' . $s_newGender .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo ;
+    $query = 'UPDATE `User` SET gender = ' . $s_newGender .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo() ;
 
     if (!($dbResult = mysqli_query($dbLink, $query)))
     {
