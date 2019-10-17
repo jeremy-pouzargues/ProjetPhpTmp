@@ -1,6 +1,6 @@
 <?php
 
-    require'../Model/User.php';
+    require '../Model/profileM.php';
     session_start();
     if($_SESSION['login']!='ok')
     {
@@ -8,8 +8,6 @@
     }
 
     $s_action = $_POST['button'];
-
-    require '../Model/profileM.php';
 
 
     if ($s_action == 'chSurname')
