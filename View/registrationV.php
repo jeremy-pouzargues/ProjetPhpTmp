@@ -33,18 +33,19 @@
         <input type="text" name="Name" placeholder="Nom" /> <br/>
         <input type="text" name="Pseudo" placeholder="Pseudo" /> <br/>
         <input type="email" name="Email" placeholder="E-Mail"/> <br/>
+        Date de Naissance : <br/>
         <input type="date" name="Birth" placeholder="Date de naissance"/> <br/>
         <input type="password" name="Pwd" placeholder="Mot de passe"/> <br/>
         <input type="password" name="Pwd2" placeholder="Verification du mot de passe"/> <br/>
         <?php echo '<strong>' . $s_error . '</strong><br/>' ?>
         <select name="Gender">
-            <option value="Man">
+            <option value="Homme">
                 Homme
             </option>
-            <option value="Woman">
+            <option value="Femme">
                 Femme
             </option>
-            <option value="None">
+            <option value="Non spécifié">
                 Non spécifié
             </option>
         </select>

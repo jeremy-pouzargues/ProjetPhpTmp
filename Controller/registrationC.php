@@ -22,7 +22,6 @@
         {
 
 
-
             $newUser = new User(0,$s_surname, $s_name, $s_pseudo, $s_email, $d_birth, $s_pwd, $s_gender);
 
             registration($newUser);
@@ -34,11 +33,11 @@
         {
             header('Location: ../View/registrationV.php?error=wrong');
         }
-        else if (checkPseudo($s_pseudo) == 1)
+        else if (checkPseudo($s_pseudo))
         {
             header('Location: ../View/registrationV.php?error=pseudo');
         }
-        else if (checkEmail($s_email) == 1)
+        else if (checkEmail($s_email))
         {
             header('Location: ../View/registrationV.php?error=email');
         }
