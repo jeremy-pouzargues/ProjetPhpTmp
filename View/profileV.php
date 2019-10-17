@@ -80,7 +80,7 @@ else
                 <option value="Femme">
                     Femme
                 </option>
-                <option value="Non spécifié">
+                <option value="Autre">
                     Non spécifié
                 </option>
             </select>
