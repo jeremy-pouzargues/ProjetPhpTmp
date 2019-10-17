@@ -12,6 +12,7 @@
     $s_gender = $_POST['Gender'];
 
     print_r($s_pwd);
+    echo '<br/>';
     print_r($s_pwd2);
     exit();
 
