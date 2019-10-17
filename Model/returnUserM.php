@@ -1,6 +1,6 @@
 <?php
 
-    require"User.php";
+    require "User.php";
 
     function returnUser ($s_pseudo,$s_password)
     {
