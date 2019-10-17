@@ -3,7 +3,7 @@
 
     require 'User.php';
 
-    require 'dbConnect.php';
+    require_once 'dbConnect.php';
 
     function registration($newUser)
     {

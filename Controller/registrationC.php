@@ -18,10 +18,12 @@
 
         require '../Model/checkM.php';
 
+        require '../Model/registrationM.php';
+
         if ($s_surname != NULL AND $s_name != NULL AND $s_pseudo != NULL AND $s_email != NULL AND $d_birth != NULL AND $s_pwd != NULL AND $s_pwd2 != NULL AND $s_gender != NULL AND checkPseudo($s_pseudo) == 0 AND checkEmail($s_email) == 0)
         {
 
-            require '../Model/registrationM.php';
+
 
 
             $newUser = new User(0,$s_surname, $s_name, $s_pseudo, $s_email, $d_birth, $s_pwd, $s_gender);
