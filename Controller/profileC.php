@@ -48,5 +48,5 @@
         changeGender($s_newGender);
         $_SESSION['user']->setMyGender($s_newGender);
     }
-    require '../View/profileV.php';
+//    require '../View/profileV.php';
 
