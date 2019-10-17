@@ -11,6 +11,10 @@
     $s_pwd2 = password_hash($s_pwd2, PASSWORD_DEFAULT);
     $s_gender = $_POST['Gender'];
 
+    print_r($s_pwd);
+    print_r($s_pwd2);
+    exit();
+
     if ($s_pwd != $s_pwd2)
     {
         header('Location: ../View/registrationV.php?error=pwd');
