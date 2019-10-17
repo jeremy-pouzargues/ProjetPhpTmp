@@ -11,9 +11,15 @@
     $s_pwd2 = password_hash($s_pwd2, PASSWORD_BCRYPT);
     $s_gender = $_POST['Gender'];
 
-    print_r($s_pwd);
-    echo '<br/>';
-    print_r($s_pwd2);
+//    print_r($s_pwd);
+//    echo '<br/>';
+//    print_r($s_pwd2);
+//    exit();
+
+    if ($s_pwd == $s_pwd2)
+        echo 'trop bien ça marche';
+    else
+        echo 'trop nul ça marche pas';
     exit();
 
     if ($s_pwd != $s_pwd2)
