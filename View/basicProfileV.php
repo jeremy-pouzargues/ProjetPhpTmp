@@ -55,7 +55,10 @@ else
             Votre genre : <?php echo $_SESSION['user']->getMyGender(); ?> <br/>
             <br/>
         </p>
-            <button type="submit" onclick="<?php require 'profileV.php' ?>" name="button" value="changeInfo"> Modifier </button> <br/>
+
+        <form action="profileV.php">
+            <button type="submit" name="button" value="changeInfo"> Modifier </button> <br/>
+        </form>
 
 
     </form>

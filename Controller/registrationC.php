@@ -30,7 +30,7 @@
 
             registration($newUser);
 
-            require '../View/loginV.php';
+            header('Location: ../View/loginV.php');
 
         }
         else if ($s_surname == NULL OR $s_name == NULL OR $s_pseudo == NULL OR $s_email == NULL OR $d_birth == NULL OR $s_pwd == NULL OR $s_pwd2 == NULL OR $s_gender == NULL)
