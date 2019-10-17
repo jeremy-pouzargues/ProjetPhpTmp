@@ -1,11 +1,12 @@
 <?php
 
 
+
+
+
+    require'checkM.php';
+
     require 'User.php';
-
-
-    require'../Model/checkM.php';
-
     session_start();
     if($_SESSION['login']!='ok')
     {

@@ -1,6 +1,6 @@
 <?php
 
-
+    require'User.php';
     session_start();
     if($_SESSION['login']!='ok')
     {
