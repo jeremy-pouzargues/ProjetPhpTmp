@@ -32,6 +32,7 @@ else
 
 
     <h1>Votre profil</h1>
+
         <p>
             Votre prénom : <?php echo $_SESSION['user']->getMySurname(); ?> <br/>
             <br/>
