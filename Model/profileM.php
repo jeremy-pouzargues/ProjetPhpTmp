@@ -23,9 +23,6 @@
         }
         $dbLink = dbConnect();
 
-        print_r($_SESSION['user']);
-        exit();
-
 
         $query = 'UPDATE `User` SET surname = ' . $s_newSurname .' WHERE pseudo = ' . $U_tmpUser->getMyPseudo() ;
 
