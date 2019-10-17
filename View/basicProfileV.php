@@ -32,8 +32,6 @@ else
 
 
     <h1>Votre profil</h1>
-
-    <form action="../Controller/profileC.php" method="post">
         <p>
             Votre prénom : <?php echo $_SESSION['user']->getMySurname(); ?> <br/>
             <br/>
@@ -61,7 +59,6 @@ else
         </form>
 
 
-    </form>
 
 
 <?php
