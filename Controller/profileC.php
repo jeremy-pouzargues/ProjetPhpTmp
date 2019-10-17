@@ -10,37 +10,37 @@
     {
         $s_newSurname = $_POST['chSurname'];
         changeSurname($s_newSurname);
-        $_SESSION['user'] = returnUser($_SESSION['user']->getMyPseudo(), $_SESSION['user']->getMyPassword());
+        $_SESSION['user']->setMySurname($s_newSurname);
     }
     else if ($s_action == 'chNom')
     {
-        $s_newNom = $_POST['chNom'];
-        changeNom($s_newNom);
-        $_SESSION['user'] = returnUser($_SESSION['user']->getMyPseudo(), $_SESSION['user']->getMyPassword());
+        $s_newName = $_POST['chNom'];
+        changeName($s_newName);
+        $_SESSION['user']->setMyName($s_newName);
     }
     else if ($s_action == 'chPseudo')
     {
         $s_newPseudo = $_POST['chPseudo'];
         changePseudo($s_newPseudo);
-        $_SESSION['user'] = returnUser($s_newPseudo, $_SESSION['user']->getMyPassword());
+        $_SESSION['user']->setMyPseudo($s_newPseudo);
     }
     else if ($s_action == 'chBirth')
     {
-        $s_newBirth = $_POST['chBirth'];
-        changeBirth($s_newBirth);
-        $_SESSION['user'] = returnUser($_SESSION['user']->getMyPseudo(), $_SESSION['user']->getMyPassword());
+        $d_newBirth = $_POST['chBirth'];
+        changeBirth($d_newBirth);
+        $_SESSION['user']->setMyBirth($d_newBirth);
     }
     else if ($s_action == 'chPwd')
     {
         $s_newPwd = $_POST['chPwd'];
         changePassword($s_newPwd);
-        $_SESSION['user'] = returnUser($_SESSION['user']->getMyPseudo(), $s_newPwd);
+        $_SESSION['user']->setMyPassword($s_newPwd);
     }
     else if ($s_action == 'chGender')
     {
         $s_newGender = $_POST['chGender'];
         changeGender($s_newGender);
-        $_SESSION['user'] = returnUser($_SESSION['user']->getMyPseudo(), $_SESSION['user']->getMyPassword());
+        $_SESSION['user']->setMyGender($s_newGender);
     }
     require"../View/profileV.php";
 

@@ -80,16 +80,16 @@
         }
     }
 
-    function changeBirth ($s_newBirth)
+    function changeBirth ($d_newBirth)
     {
-        if($s_newBirth == NULL)
+        if($d_newBirth == NULL)
         {
             header('Location: ../View/profileV.php?error=5');
         }
 
         $dbLink = dbConnect();
 
-        $query = 'UPDATE `User` SET birthdate = ' . $s_newBirth .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo() ;
+        $query = 'UPDATE `User` SET birthdate = ' . $d_newBirth .' WHERE pseudo = ' . $_SESSION['user']->getMyPseudo() ;
 
         if (!($dbResult = mysqli_query($dbLink, $query)))
         {
@@ -124,12 +124,8 @@
         }
     }
 
-function changeGender ($s_newGender)
-{
-//    if($s_newGender == NULL)
-//    {
-//        header('Location: ../View/profileV.php?error=7');
-//    }
+    function changeGender ($s_newGender)
+    {
 
     $dbLink = dbConnect();
 
@@ -144,5 +140,5 @@ function changeGender ($s_newGender)
         echo 'Requête : ' . $query . '<br/>';
         exit();
     }
-}
+    }
 
