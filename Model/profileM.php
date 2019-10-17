@@ -6,6 +6,12 @@
 
     require'../Model/checkM.php';
 
+    session_start();
+    if($_SESSION['login']!='ok')
+    {
+        die('Erreur d\'authentification');
+    }
+
 
     function changeSurname ($s_newSurname)
     {
