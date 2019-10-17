@@ -66,7 +66,7 @@ else
             <br/>
 
             Pour changer votre mot de passe : <br/>
-            <input type="text" name="Pwd" placeholder="Changer votre mot de passe" /> <br/>
+            <input type="password" name="Pwd" placeholder="Changer votre mot de passe" /> <br/>
             <button type="submit" name="button" value="chPwd"> Changer </button> <br/>
             <?php   if ($s_error == 6) echo 'Vous n\'avez pas rempli le champ mot de passe.';
                     else echo '';?>
@@ -84,7 +84,7 @@ else
                     Non spécifié
                 </option>
             </select>
-            <button type="submit" name="chGender" value="chGender"> Changer </button> <br/>
+            <button type="submit" name="button" value="chGender"> Changer </button> <br/>
             <br/>
         </p>
     </form>
