@@ -49,8 +49,6 @@
         }
 
         $result = $dbResult->fetch_assoc();
-        print_r(new User($result['admin'], $result['surname'], $result['name'], $result['pseudo'],$result['email'], $result['birthdate'], $result['password'],$result['gender']));
-        exit();
 
         return new User($result['admin'], $result['surname'], $result['name'], $result['pseudo'],$result['email'], $result['birthdate'], $result['password'],$result['gender']);
     }
