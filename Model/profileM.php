@@ -3,7 +3,6 @@
 
     require 'User.php';
 
-    require 'dbConnect.php';
 
     require'../Model/checkM.php';
 

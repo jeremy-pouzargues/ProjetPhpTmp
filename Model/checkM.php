@@ -1,5 +1,6 @@
 <?php
 
+    require "dbConnect.php";
 
     function checkPseudo($s_pseudo)
     {

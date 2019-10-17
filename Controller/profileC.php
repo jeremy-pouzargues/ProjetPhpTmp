@@ -1,16 +1,16 @@
 <?php
 
 
-    $s_action = $_POST['action'];
-
-    require '../Model/profileM.php';
-    require '../Model/returnUserM.php';
-
     session_start();
     if($_SESSION['login']!='ok')
     {
         die('Erreur d\'authentification');
     }
+
+    $s_action = $_POST['action'];
+
+    require_once '../Model/profileM.php';
+    require_once '../Model/returnUserM.php';
 
 
     if ($s_action == 'chSurname')
