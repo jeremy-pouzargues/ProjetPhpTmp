@@ -36,21 +36,21 @@ else
     <form action="../Controller/profileC.php" method="post">
         <p>
             Votre prénom : <?php echo $_SESSION['user']->getMySurname(); ?> <br/>
-            <input type="text" name="chSurname" placeholder="Changer votre prénom" /> <br/>
+            <input type="text" name="Surname" placeholder="Changer votre prénom" /> <br/>
             <button type="submit" name="button" value="chSurname"> Changer </button> <br/>
             <?php   if ($s_error == 1) echo 'Vous n\'avez pas rempli le champ prénom.';
                     else echo ''; ?>
             <br/>
 
             Votre nom : <?php echo $_SESSION['user']->getMyName(); ?> <br/>
-            <input type="text" name="chNom" placeholder="Changer votre nom" /> <br/>
-            <button type="submit" name="button" value="chNom"> Changer </button> <br/>
+            <input type="text" name="Name" placeholder="Changer votre nom" /> <br/>
+            <button type="submit" name="button" value="chName"> Changer </button> <br/>
             <?php   if ($s_error == 2) echo 'Vous n\'avez pas rempli le champ nom.';
                     else echo ''; ?>
             <br/>
 
             Votre pseudo : <?php echo $_SESSION['user']->getMyPseudo(); ?> <br/>
-            <input type="text" name="chPseudo" placeholder="Changer votre pseudo" /> <br/>
+            <input type="text" name="Pseudo" placeholder="Changer votre pseudo" /> <br/>
             <button type="submit" name="button" value="chPseudo"> Changer </button> <br/>
             <?php   if ($s_error == 3) echo 'Vous n\'avez pas rempli le champ pseudo.';
                     else if ($s_error == 4) echo 'Le pseudo que vous avez choisi est déjà utilisé.';
@@ -59,14 +59,14 @@ else
 
             Votre date de naissance : <?php echo $_SESSION['user']->getMyBirth(); ?> <br/>
             Changer votre date de naissance : <br/>
-            <input type="date" name="chBirth" placeholder="Date de naissance"/> <br/>
+            <input type="date" name="Birth" placeholder="Date de naissance"/> <br/>
             <button type="submit" name="button" value="chBirth"> Changer </button> <br/>
             <?php   if ($s_error == 5) echo 'Vous n\'avez pas rempli le champ date de naissance.';
                     else echo '';?>
             <br/>
 
             Pour changer votre mot de passe : <br/>
-            <input type="text" name="chPwd" placeholder="Changer votre mot de passe" /> <br/>
+            <input type="text" name="Pwd" placeholder="Changer votre mot de passe" /> <br/>
             <button type="submit" name="button" value="chPwd"> Changer </button> <br/>
             <?php   if ($s_error == 6) echo 'Vous n\'avez pas rempli le champ mot de passe.';
                     else echo '';?>
