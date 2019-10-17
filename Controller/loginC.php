@@ -3,7 +3,6 @@
     session_start();
 
     require '../Model/loginM.php';
-    require '../Model/returnUserM.php';
 
     $s_pseudo = $_POST['Pseudo'];
     $s_password = $_POST['Pwd'];

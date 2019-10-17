@@ -10,7 +10,6 @@
     $s_action = $_POST['action'];
 
     require '../Model/profileM.php';
-    require '../Model/returnUserM.php';
 
 
     if ($s_action == 'chSurname')
@@ -49,5 +48,5 @@
         changeGender($s_newGender);
         $_SESSION['user']->setMyGender($s_newGender);
     }
-//    require '../View/profileV.php';
+    require '../View/profileV.php';
 
