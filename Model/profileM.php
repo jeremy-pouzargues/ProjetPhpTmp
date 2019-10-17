@@ -36,7 +36,7 @@
 
         if($s_newName == NULL)
         {
-            header('Location: ../View/profileV.php?error=wrongName');
+            header('Location: ../View/profileV.php?error=2');
         }
 
         $dbLink = dbConnect();
@@ -58,11 +58,11 @@
     {
         if (checkPseudo($s_newPseudo))
         {
-            header('Location: ../View/profileV.php?error=samePseudo');
+            header('Location: ../View/profileV.php?error=3');
         }
         else if($s_newPseudo == NULL)
         {
-            header('Location: ../View/profileV.php?error=wrongPseudo');
+            header('Location: ../View/profileV.php?error=4');
         }
 
         $dbLink = dbConnect();
@@ -84,7 +84,7 @@
     {
         if($s_newBirth == NULL)
         {
-            header('Location: ../View/profileV.php?error=wrongPseudo');
+            header('Location: ../View/profileV.php?error=5');
         }
 
         $dbLink = dbConnect();
@@ -106,7 +106,7 @@
     {
         if($s_newPassword == NULL)
         {
-            header('Location: ../View/profileV.php?error=wrongPseudo');
+            header('Location: ../View/profileV.php?error=6');
         }
 
         $dbLink = dbConnect();
@@ -126,10 +126,10 @@
 
 function changeGender ($s_newGender)
 {
-    if($s_newGender == NULL)
-    {
-        header('Location: ../View/profileV.php?error=wrongPseudo');
-    }
+//    if($s_newGender == NULL)
+//    {
+//        header('Location: ../View/profileV.php?error=7');
+//    }
 
     $dbLink = dbConnect();
 
