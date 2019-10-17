@@ -72,7 +72,7 @@ else
                     else echo '';?>
             <br/>
 
-            Pour changer votre genre : <br/>
+            Votre genre : <?php echo $_SESSION['user']->getMyGender(); ?> <br/>
             <select name="Gender">
                 <option value="Homme">
                     Homme
